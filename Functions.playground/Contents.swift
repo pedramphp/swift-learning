@@ -17,6 +17,8 @@ func calculateArea(height: Int, width: Int) -> Int {
 // job of a function is to do repetitive tasks
 print("Area = \(calculateArea(12, width: 10))")
 
+// send parameters by order
+//label parameters
 calculateArea(12, width: 100000)
 
 
