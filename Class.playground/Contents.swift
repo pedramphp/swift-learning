@@ -5,6 +5,7 @@ import UIKit
 var str = "Hello, playground"
 
 // Class only creates a default empty initializer
+// Base class
 class Product {
     let title: String
     let price: Double
@@ -26,5 +27,25 @@ quadcopter.title
 quadcopter.price
 quadcopter.discountedPrice(50)
 
+
+enum Size{
+    case Small, Medium, Large
+    init() {
+        self = .Small
+    }
+}
+
+
+// Clothing inherits of Product - use inheritance and subclass interchangibly.
+// Product is the super class of Clothing class.
+class Clothing: Product {
+    var size = Size(); // property of Clothing
+}
+
+var tshirt = Clothing(title: "Vintage", price: 49.99)
+tshirt.title
+tshirt.price
+tshirt.discountedPrice(10)
+tshirt.size
 
  
