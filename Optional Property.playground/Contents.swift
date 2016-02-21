@@ -30,6 +30,7 @@ toy.batteries = true
 toy.batteries!
 
 print(toy.batteries)
+
 if let batteries = toy.batteries {
     if batteries {
         print(batteries)
