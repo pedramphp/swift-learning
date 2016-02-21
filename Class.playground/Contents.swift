@@ -70,10 +70,13 @@ tshirt.price
 tshirt.discountedPrice()
 tshirt.size
 
-
+// A convenience initializer can't call the designated initializer of a super class.
+// A designated initializer can't call the convenience initializer of a super class.
 // convenience initializer
 var pink = Clothing(title: "pink stylish")
 pink.price
 pink.size
 pink.designer
+
+// Stored Properties - because they store values.
  
