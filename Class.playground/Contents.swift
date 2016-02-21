@@ -35,17 +35,45 @@ enum Size{
     }
 }
 
-
+// DRY - Don't Repeat Yourself.
 // Clothing inherits of Product - use inheritance and subclass interchangibly.
 // Product is the super class of Clothing class.
 class Clothing: Product {
-    var size = Size(); // property of Clothing
+    var size = Size() // property of Clothing
+    let designer: String
+    
+    // designated Initializer - as long as you initialize all the properties
+    init(title: String, price: Double, designer: String) {
+        self.designer = designer
+        // DRY principle
+        super.init(title: title, price: price)
+    }
+    
+    // convenience initializer
+    // you can't super initializer from convenience initializer
+    convenience init (title: String){
+        self.init(title: title, price: 99, designer: "Calvin Klein")
+    }
+    
+    // overriding discountedPrice
+    // the have the same method signature
+    // method orverriding
+    override func discountedPrice(percentage: Double = 10.0) -> Double {
+        return super.discountedPrice(percentage)
+    }
+    
 }
 
-var tshirt = Clothing(title: "Vintage", price: 49.99)
+var tshirt = Clothing(title: "Vintage", price: 49.99, designer: "Prada")
 tshirt.title
 tshirt.price
-tshirt.discountedPrice(10)
+tshirt.discountedPrice()
 tshirt.size
 
+
+// convenience initializer
+var pink = Clothing(title: "pink stylish")
+pink.price
+pink.size
+pink.designer
  
