@@ -1,5 +1,10 @@
 // Closures
 
+// How Do I Declare a Closure in Swift? -  http://goshdarnclosuresyntax.com/
+// http://airspeedvelocity.net/2014/06/11/a-basic-tutorial-on-functions-and-closures-in-swift/
+// https://www.weheartswift.com/higher-order-functions-map-filter-reduce-and-more/
+
+
 // This function takes a string and prints it
 
 func printString(aString: String) {
@@ -167,3 +172,29 @@ t
 t = numbers.map{
     $0 * 3
 }
+
+let numbers2 = [Int](0...50)
+
+
+func isOdd(number: Int) -> Bool{
+    return number % 2 == 1
+}
+
+let oddNumbers = numbers2.filter(isOdd)
+// Enter your code below
+
+
+
+
+
+// type alias
+typealias JSONDictionaryCompletion = ([String: AnyObject]?) -> ()
+
+func downloadJSONFromURL(completion: JSONDictionaryCompletion) {
+    
+}
+
+
+func getRecentBlogPosts() {
+}
+
